@@ -3,7 +3,7 @@ package com.example.samplegittoast
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import com.example.toastlibrary.SToast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,9 @@ class MainActivity : AppCompatActivity() {
         val btnClick = findViewById<Button>(R.id.buttonClick)
 
         btnClick.setOnClickListener {
-            Toast.makeText(this, "Button Clicked!!", Toast.LENGTH_LONG).show()
+            SToast().showToast(this)
         }
     }
+
+
 }
